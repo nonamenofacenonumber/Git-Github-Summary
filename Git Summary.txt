@@ -1,0 +1,80 @@
+Register your name and email in git to save commit:
+	git config --global user.email "you@example.com"
+	git config --global user.name "Your Name"
+
+	git config user.email "you@example.com"		(just in this project)
+	git config user.name "Your Name"		(just in this project)
+--------------------------------------------------------------
+
+git --version
+git init
+git add assets		(add assets folder)
+git add index.html	(add index.html file)
+git status
+git add .		(add all files in stage)
+git rm --catched index.html	(remove index.html from stage)
+git rm --catched -r .	(remove all stages)
+git commit -h		(commit help)
+git commit -m "add project"	(m-> message)
+git commit -a -m "add project"	(a-> add | m -> message = mix stage & commit)
+
+git diff
+git diff --help
+
+git log
+git log --help
+git log --oneline (show commits in one line)
+git log -2 --oneline (show two last commits in one line)
+git log -p
+git log --stat
+
+git checkout -- .		(to backward changes in files)
+git checkout -- index.html	(to backward changes in specific file)
+git reset HEAD .		(to remove changes from stage)
+git reset HEAD index.html	(to remove changes in specific file from stage)
+git reset 47bbcb2185 		(commit id) -> (remove changes from next commit and doesn't save in stage)
+
+git branch --help
+git branch -h
+git branch dev1
+git checkout dev
+git branch -d dev1
+git checkout b dev2
+git merge -m "merge1 message" dev1
+git merge --abort
+git log --graph
+
+git stash --help
+git stash	or	git stash save "stash1 message"
+git stash list
+git stash show
+git stash show stash@{0}
+git stash drop stash@{0}
+git stash apply stash@{0}	(run changes in stash)
+git stash pop stash@{0}		(run changes in stash and delete this stash item)
+
+clear
+
+touch .gitignore
+
+git rm --cached -r .	then
+git add .		then
+git commit -m "remove cached"
+
+git config --global
+
+git remote add origin1 https://github.com/saeedaghabararian/toplap.git
+git remote
+git push -u origin1 master
+git branch -M main
+git push -u origin1 main
+git remote rm origin1
+
+git pull --help
+git pull origin1 master
+git pull -f origin1 master
+
+git clone https://github.com/saeedaghabararian/git_sy.git myFolderName
+
+
+
